@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Pixelify+Sans&family=Titan+One&family=Tomorrow:wght@700&display=swap');
+
+audio {
+    display: none;
+}
+
+body {
+    background-color: black;
+}
+
+#instructions,
+#endScreen {
+    height: 760px;
+    justify-content: center;
+}
+
+#instructions h1,
+#endScreen h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Pixelify Sans', 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+#instructions p,
+#endScreen p {
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.5rem;
+}
+
+#instructions img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layout {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 100px 200px 80px 300px 80px;
+    background: black;
+    grid-template-areas:
+        "timer" "timer" "timer" "timer"
+        "input1" "input2" "input3" "input4"
+        "status" "status" "status" "status"
+        "mem" "mem" "enemy" "enemy"
+        "enemiesDefeated" "enemiesDefeated" "enemiesDefeated" "enemiesDefeated"
+}
+
+.timer {
+    grid-column: span 4;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    width: 800px;
+    margin-left: calc(50vw - 400px);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.timer-inner {
+    grid-column: span 4;
+    width: 90%;
+    height: 60px;
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 10px;
+    transition: width linear 1s;
+}
+
+.input1,
+.input2,
+.input3,
+.input4 {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.input1 img,
+.input2 img,
+.input3 img,
+.input4 img {
+    margin: 10px;
+    width: 80%;
+}
+
+.status {
+    grid-column: span 4;
+    background-color: black;
+}
+
+.enemiesDefeated {
+    grid-column: span 4;
+    background-color: rgb(55, 55, 55);
+}
+
+.status p,
+.enemiesDefeated p {
+    font-family: 'Pixelify Sans', 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.mem {
+    grid-column: span 2;
+    background-color: black;
+    position: relative;
+}
+
+.mem img {
+    position: absolute;
+    height: auto;
+    width: 30%;
+    left: 200px;
+    bottom: 30px;
+}
+
+.enemy {
+    grid-column: span 2;
+    background-color: black;
+    position: relative;
+}
+
+.enemy img {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    right: 200px;
+    bottom: 10px;
+}

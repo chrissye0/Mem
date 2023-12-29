@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 Proposal</title>
+</head>
+
+<body>
+    <h1>
+        Project 3 Proposal
+    </h1>
+    <h2>
+        Dungeons of Mem
+    </h2>
+    <h3>
+        High Concept
+    </h3>
+    <p>
+        A memory-based game where you race against the clock fighting enemies in a perilous dungeon.
+    </p>
+    <h3>
+        Genre
+    </h3>
+    <p>
+        Action, Memory, Dungeon-crawler
+    </p>
+    <h3>
+        Platform
+    </h3>
+    <p>
+        Desktop web (and maybe mobile web if I have the time)
+    </p>
+    <h3>
+        Story
+    </h3>
+    <p>
+        You play as a little wizard cat who got trapped in an underground dungeon. The dungeon is filled with dangerous
+        foes, ranging from slime monsters, skeletons, to other wizards. Time is running low, and you must find a way to
+        escape.
+    </p>
+    <h3>
+        Aesthetics
+    </h3>
+    <p>
+        It would have a pixel art aesthetic. It would be mostly monochromatic, and it may have a few color accents on
+        the main character or displayed inputs.
+    </p>
+    <h3>
+        Gameplay
+    </h3>
+    <p>
+        The user will use either W, A, S, D or the arrow keys. The user will be faced with multiple foes, with each
+        requiring a certain series of attacks/inputs to be defeated. The user will pick up on attack patterns as they
+        progress through the game. If a user enters a series of inputs, they will receive feedback regarding which
+        inputs were right and which were wrong. If the user’s input is wrong, points are deducted from the timer or
+        health bar.
+    </p>
+    <h3>
+        Mockups
+    </h3>
+    <img src="images/Mem-mockup.jpg" alt="mockup 1" style="width:40%">
+    <img src="images/Mem-mockup-1.jpg" alt="mockup 2" style="width:40%">
+    <h3>
+        Other
+    </h3>
+    <p>
+        I may make my own sprites and assets for the protagonist and enemies. If I do, they will all be created in the
+        Procreate digital painting app.
+    </p>
+    <h3>
+        About the Developer
+    </h3>
+    <p>
+        Hi, my name is Christine! I am a 2nd year in the New Media Interactive Development program. I’m proficient in
+        JavaScript, HTML, CSS, and C#, and I enjoy creating digital art and playing video games!
+    </p>
+    <h1>
+        Documentation
+    </h1>
+    <h2>
+        Process
+    </h2>
+    <p>
+        I started out with my concept and a few character sprites I made beforehand. I came up with enemy ideas as well as input combinations. I experimented a bit before deciding to turn each enemy into an object literal, with properties for their name as well as input combination. Afterward, I developed functions for grabbing the key characters from the user's input and adding them to an array, and then made a function to compare that array to the enemy input combination array. I figured out how to make enemies appear one after another once defeated, and at this point most code was being printed to the console.
+        <br>
+        Later on, I began working on transferring everything over to the display and working on the HTML components. I made the rest of the sprites, and after taking a look at my previous mock-ups, I thought to use CSS grid to get my desired design layout. I made divs for different components of the screen and changed them depending on variables and user inputs. Basic information was displayed, and I thought to experiment more with colors, sprite locations, and so forth to make it more visually pleasing.
+        <br>
+        After the critique day and receiving feedback from peers, I worked toward debugging, adding a timer, providing instructions, and figuring how else I could provide feedback for correct and incorrect inputs. An error would occur if the user would press more keys than the enemy allotted before a new enemy loaded, and I adjusted this by instead grabbing the enemy's input length for my for loop. I added a timer using setInterval(), and then finally added start and end screens (start screen triggering when the game starts and end screen triggering when the timer runs out). I ran into a few errors if the user chooses to run the game again after losing, but I resolved this by restarting variables to their default values once the game loads. I finally made small quality changes by adjusting sprite sizes to look less blurry on the display and adding sound effects. 
+    </p>
+    <h2>
+        Sources
+    </h2>
+    <ul>
+        <li><a href="https://stackoverflow.com/questions/3682115/how-to-get-the-key-pressed-and-put-into-array-in-javascript">Putting Keys Pressed into an Array</a></li>
+        <li><a href="https://www.scaler.com/topics/compare-two-arrays-in-javascript/">Compare Arrays</a></li>
+        <li><a href="https://sfxr.me/">Sound Effects</a></li>
+    </ul>
+    <h2>
+        Requirements
+    </h2>
+        <ul>
+            <li>Created an interactive game with the Browser DOM.</li>
+            <li>The game is easy to use and has basic controls (W, A, S, D).</li>
+            <li>No JS errors or exceptions are thrown.</li>
+            <li>Page design was taken into consideration with CSS Grid.</li>
+            <li>Users should be able to pick up how to play as they progress through the game. Instructions are also provided on the start screen. If an input is incorrect, a component on the screen changes to show this.</li>
+            <li>All components are shown on a 1024x768 display.</li>
+            <li>Images are optimized for web delivery.</li>
+            <li>Sound effects are used (start and end screen, correct and incorrect inputs).</li>
+            <li>Fonts, graphics, sprites, and sounds are fully customized.</li>
+            <li>HTML is valid with no errors or warnings.</li>
+            <li>CSS is valid with no errors or warnings.</li>
+            <li>CSS is in an external style sheet.</li>
+            <li>HTML semantic and structural elements were used where practical.</li>
+            <li>An ES6 class was used and created. The Mem class in Mem.js is used to animate the Mem sprite upon user input.</li>
+            <li>Proper coding conventions were used (let and const, querySelector(), avoiding repetitions, comments, etc.)</li>
+        </ul>
+    <h2>
+        Extra
+    </h2>
+        <ul>
+            <li>Sound effects are played on the start and end screen and upon both correct and incorrect inputs.</li>
+            <li>All sprites were made by me in the Procreate app.</li>
+            <li>Most if not all errors should be resolved.</li>
+            <li>As the game progresses, the difficulty increases. More enemies appear, and the timer ticks even faster (and the time-increase reward for correct inputs is adjusted accordingly).</li>
+            <li>The user receives feedback on correct and incorrect inputs (the box color of the corresponding input becomes red if the input is incorrect and otherwise remains white).</li>
+            <li>A start screen with instructions and an introduction to the game is included once the game is loaded. An end screen is also added and prompts when the timer runs out. </li>
+        </ul>
+</body>
+
+</html>
